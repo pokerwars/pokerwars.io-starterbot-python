@@ -67,7 +67,7 @@ def subscribe():
     while down:
         try:
             print('Trying to subscribe to pokerwars.io ...')
-            r = requests.get(bot_endpoint + 'pokerwars.io/ping')
+            r = requests.get(bot_endpoint + '/pokerwars.io/ping')
 
             if r.status_code == 200:
                 down = False
