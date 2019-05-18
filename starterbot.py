@@ -90,4 +90,4 @@ if __name__ == '__main__':
     s.daemon = True
     s.start()
 
-    run(host='0.0.0.0', port=port)
+    run(port=port)
