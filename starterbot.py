@@ -3,14 +3,18 @@
 from threading import Thread
 from bottle    import get, post, run, request
 from time      import sleep
+from dotenv    import load_dotenv
 from sys       import exit
 
 import requests
+import os
 
-port          = 8090
-username      = 'insert here your bot username, find it at https://www.pokerwars.io/profile'
-api_token     = 'insert here your api token, find it at https://www.pokerwars.io/token'
-bot_endpoint  = 'insert here your bot ip address. i.e.: http://1.2.3.4:8090/'
+load_dotenv()
+
+port          = 3000
+username      = os.getenv('USERNAME')
+api_token     = os.getenv('API_TOKEN')
+bot_endpoint  = os.getenv('BOT_ENDPOINT')
 notifications = False
 
 @post('/pokerwars.io/play')
