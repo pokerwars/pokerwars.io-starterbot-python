@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from threading import Thread
-from bottle    import get, post, run, request
+from bottle    import get, post, run, request, response
 from time      import sleep
 from dotenv    import load_dotenv
 from sys       import exit
@@ -47,18 +47,21 @@ def play():
     print('Players in turn order with their info are: ' + str(game_info["players"]))
 
     # implement your strategy here, now we always return fold, not great for your leaderboard!
+    response.content_type = 'application/json'
     return {"action": "fold"}
 
 @get('/pokerwars.io/ping')
 def ping():
     # This is used by pokerwars.io when your bot subscribe to verify that is alive and responding
     print('Received ping from pokerwars.io, responding with a pong')
+    response.content_type = 'application/json'
     return {"pong": True}
 
 @post('/pokerwars.io/notifications')
 def notifications():
     print('Received notification')
     print(request.json)
+    response.content_type = 'application/json'
     return
 
 def subscribe():
