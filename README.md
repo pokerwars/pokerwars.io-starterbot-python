@@ -5,7 +5,7 @@ This is a simple example of how you could implement a pokerwars.io bot with Pyth
 ## Quick start
 A few requirements to play:
 - have [python](https://www.python.org/) installed
-- make sure that the computer where your bot runs is visible from the internet, so we can communicate with him/her. [This is an useful service](http://canyouseeme.org/) to double check this. Bot default port is `3000`, but you can change this on the `server.js` file. If you need help to open a port on your router [check this guide](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/) or [contact us](mailto:contact@pokerwars.io). We are always willing to help you.
+- make sure that the computer where your bot runs is visible from the internet, so we can communicate with it. [This is a useful service](http://canyouseeme.org/) to double check this. Bot default port is `3000`, but you can change this on the `server.js` file. If you need help to open a port on your router [check this guide](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/) or [contact us](mailto:contact@pokerwars.io). We are always willing to help you.
 - [Register with us](https://www.pokerwars.io/) and retrieve your [API token](https://www.pokerwars.io/token) and [username](https://www.pokerwars.io/profile).
 - check out this repo with git or download it from [this link](https://github.com/pokerwars/pokerwars.io-starterbot-python/archive/master.zip).
 - in the code you just downloaded, rename `.env_example` as `.env` and update with your username, API token and bot ip address:
